@@ -16,6 +16,7 @@ int CoinTosser::Toss()
 {
 	int toss = rand() % 2;
 	IncrementResultsCount(toss);
+	return toss;
 }
 
 void CoinTosser::IncrementResultsCount(int toss) 
