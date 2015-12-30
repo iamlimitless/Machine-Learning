@@ -2,3 +2,4 @@
 #Ignoring Sublime project files
 MachineLearning.sublime-project
 MachineLearning.sublime-workspace
+*.exe

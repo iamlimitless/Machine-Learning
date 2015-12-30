@@ -3,7 +3,8 @@
 
 #include <vector>
 
-enum Outcome{
+enum Outcome
+{
 	Heads,
 	Tails
 };
