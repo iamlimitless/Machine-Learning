@@ -25,12 +25,4 @@ public:
 	virtual bool DecideToRoll(int turnScore, int currentScore, int opponentScore);
 };
 
-class OptimalPlayer : public Player
-{
-public:
-	OptimalPlayer(){}
-	~OptimalPlayer() {}
-	virtual bool DecideToRoll(int turnScore, int currentScore, int opponentScore);
-};
-
 #endif //PLAYER_H

@@ -14,7 +14,7 @@ class PigGame
 public:
 	PigGame(Player* p1, Player* p2);
 	~PigGame();
-	void PlayGame();
+	int PlayGame();
 
 private:
 	int RollDice();
@@ -22,7 +22,8 @@ private:
 	Player* GetActivePlayer();
 	int GetScore();
 	int GetOpponentsScore();
-	void OutputResults();
+	void ClearScores();
+	int OutputResults();
 
 	Player* m_p1;
 	Player* m_p2;

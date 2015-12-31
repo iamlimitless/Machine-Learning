@@ -6,8 +6,6 @@ Next Step:
 Simulate games of Pig and "Learn" based on the outcomes to beat various skilled players over N matches:
 
 
-- Implement optimal player
-
 - Code Cleanup and refactor, Look for better ways to implement this
 (Could maybe pass in a lamda that determines the conditions for roll/don't roll and could eliminate the virtual player)
 

@@ -19,11 +19,10 @@ PigGame::~PigGame()
 	delete m_p2;
 }
 
-void PigGame::PlayGame()
+int PigGame::PlayGame()
 {
-	std::cout << "Game Started" << std::endl;
-
 	Player* activePlayer = GetActivePlayer();
+	ClearScores();
 	while(m_p1Score < 100 && m_p2Score < 100)
 	{
 		int result;
@@ -43,9 +42,14 @@ void PigGame::PlayGame()
 		}
 		EndTurn(turnScore);
 		activePlayer = GetActivePlayer();
-		std::cout << "Score is  " << m_p1Score << " " << m_p2Score << std::endl;
 	}
-	OutputResults();
+	return OutputResults();
+}
+
+void PigGame::ClearScores()
+{
+	m_p1Score = 0;
+	m_p2Score = 0;
 }
 
 int PigGame::RollDice()
@@ -94,14 +98,15 @@ int PigGame::GetOpponentsScore()
 	return m_p2Score;
 }
 
-void PigGame::OutputResults()
+int PigGame::OutputResults()
 {
 	std::string winner = "P2";
+	int result = PLAYER_TWO;
 	if(m_p1Score > m_p2Score)
 	{
 		winner = "P1"; 
+		result = PLAYER_ONE;
 	}
-	std::cout << "P1 Score is " << m_p1Score << std::endl;
-	std::cout << "P2 Score is " << m_p2Score << std::endl;
-	std::cout << "The winner is " << winner << std::endl;
+	std::cout << "P1 Score is " << m_p1Score << "	P2 Score is " << m_p2Score << "	The winner is " << winner << std::endl;
+	return result;
 }

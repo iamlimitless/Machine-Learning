@@ -17,9 +17,3 @@ bool RollIfDownPlayer::DecideToRoll(int turnScore, int currentScore, int opponen
 	}
 	return false;
 }
-
-bool OptimalPlayer::DecideToRoll(int turnScore, int currentScore, int opponentScore)
-{
-	//NOT Implemented Yet 
-	return true;
-}
